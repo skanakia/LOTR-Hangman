@@ -3,12 +3,14 @@ var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
 var words = ["gandalf the grey", "bilbo baggins", "elrond", "frodo baggins", "sauron", "legolas", "aragorn", "gollum", "arwen", "nazgul", "galadriel", "balrog", "gimli", "saruman", "samwise gamgee", "eowyn", "boromir", "peregrin took", "faramir", "meriadoc brandybuck", "tom bombadil", "theoden", "witch king of angmar", "eomer", "glorfindel", "radagast the brown", "treebeard", "shelob", "isildur", "elendil", "celeborn", "grima wormtongue", "varda", "anarion", "eldarion", "gamling", "old man willow", "beregond", "fredegar bolger", "forlong the fat", "harry goatleaf", "theodwyn"];
 
 var randomWord;
-// var lifeCount = 7;
-// var lossCount = 0;
-// var winCount = 0;
-// var blankArray = [];
+var lossCount = 0;
+var winCount = 0;
+
 function startGame() {
     var lifeCount = 7;
+    var lifeStatus = document.getElementById("lives");
+    lifeStatus.innerHTML = "Lives: 7"
+
     var blankStr2 = ""
     var randomNum = (Math.floor(Math.random() * words.length));
     randomWord = words[randomNum];
@@ -41,20 +43,12 @@ function startGame() {
     var guessed = [];
     var guessedStr = "";
     var letGuessed = document.getElementById("lettersGuessed");
-    // var lifeCount = 7;
-    var lifeStatus = document.getElementById("lives");
-    // var lossCount = 0;
     var lossTally = document.getElementById("losses");
-    // var winCount = 0;
     var winTally = document.getElementById("wins");
     var blankStr3 = "";
 
-    // lifeStatus.innerHTML = "Lives: " + lifeCount;
-    
-    document.addEventListener("keyup", function(){
-        var lossCount = 0;
-        var winCount = 0;
-        // var lifeCount = 7;
+
+    document.onkeyup = function(event) {
 
         if (letters.indexOf(event.key) !== -1) {
             guessed.push(event.key);
@@ -75,7 +69,6 @@ function startGame() {
                 }
                 
                 for (l = 0; l < randomWord.length; l++) {
-                    // blankStr3 = blankStr3 + blankArray[l];
                     if (blankArray[l] === " ") {
                         blankStr2 = blankStr2 +  "  |  ";
                     } else {
@@ -84,13 +77,12 @@ function startGame() {
                     }
                 }
                 
-                // if (blankArray.indexOf("_") === -1) {
-                //     winCount = winCount + 1;
-                //     winTally.innerHTML = "Wins: " + winCount;
-                //     blankArray[0] = "_";
-                // } else {
+                if (blankArray.indexOf("_") === -1) {
+                    winCount = winCount + 1;
+                    winTally.innerHTML = "Wins: " + winCount;
+                } else {
 
-                // }
+                }
 
             } else {
                 lifeCount = lifeCount - 1;
@@ -125,7 +117,7 @@ function startGame() {
         }
         
         
-    });
+    }
 
     
    
