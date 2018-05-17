@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hangman Game</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <script src="./main.js"></script>
+        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> -->
+        
+    </head>
+    <body>
+        <div="container">
+            <div class="row header">
+                <div class="col-md-12">
+                    <h1>Hangman Game</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="pictogram">
+                        <img src="assets/images/hangman0.jpg" />
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="lines">Click Start to Generate a Word</div>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="lives">Lives: 7</div>
+                    <div id="wins">Wins: 0</div>
+                    <div id="losses">Losses: 0</div>
+                    <div id="lettersGuessed">Letters Guessed: none</div>
+                    <button onclick="startGame()" id="button1" type="button" class="btn btn-outline-primary button1">Start</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
