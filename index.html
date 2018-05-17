@@ -4,38 +4,43 @@
         <title>Hangman Game</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
         <script src="./main.js"></script>
-        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         
     </head>
     <body>
-        <div="container">
+        <div class="container bg-dark text-white">
             <div class="row header">
-                <div class="col-md-12">
-                    <h1>Hangman Game</h1>
+                <div class="col-md-12 ">
+                    <img width = "1500" height = "500"  src="./assets/images/banner.jpg" class="img-fluid mx-auto"/>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-4"><img height="300" class= "img-fluid mx -auto d-block"src="./assets/images/gandalf-winter.jpg" /></div>
+                <div class="col-md-4">
                     <div id="pictogram">
-                        <img id= "hangPic" height="300" width= "200" src="assets/images/hangman0.jpg" />
+                        <img id= "hangPic" class="img-fluid mx-auto d-block"height="300" width= "200" src="assets/images/hangman0.jpg" />
                     </div>
 
                 </div>
+                <div class="col-md-4"><img height="300" class= "img-fluid mx -auto d-block"src="./assets/images/gandalf-spring.jpg" /></div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 text-center">
                     <div id="lines">Click Start to Generate a Word</div>
-                    
+                <div class="col-md-4"></div>    
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 text-center">
                     <div id="lives">Lives: 7</div>
                     <div id="wins">Wins: 0</div>
                     <div id="losses">Losses: 0</div>
                     <div id="lettersGuessed">Letters Guessed: none</div>
                     <button onclick="startGame()" id="button1" type="button" class="btn btn-outline-primary button1">Start</button>
                 </div>
+                <div class="col-md-4"></div>
             </div>
         </div>
     </body>
