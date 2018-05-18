@@ -80,6 +80,7 @@ function startGame() {
                 if (blankArray.indexOf("_") === -1) {
                     winCount = winCount + 1;
                     winTally.innerHTML = "Wins: " + winCount;
+                    alert("You Win, My Precious! Press Start to Play Again.")
                 } else {
 
                 }
